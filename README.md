@@ -132,5 +132,5 @@ uvicorn app.main:app --reload
 <p>For any inquiries or issues, feel free to reach out at:</p>
 <ul>
     <li><strong>Email</strong>: naimur.naiyimu@gmail.com/li>
-    <li><strong>GitHub</strong>: <a href="https://github.com/naimur-naiyimu">@yourusername</a></li>
+    <li><strong>GitHub</strong>: <a href="https://github.com/naimur-naiyimu">@naimur-naiyimu</a></li>
 </ul>
