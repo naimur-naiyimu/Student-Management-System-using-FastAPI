@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Optional
-
+from fastapi.responses import RedirectResponse
 app = FastAPI()
 
 # In-memory storage for simplicity
@@ -27,6 +27,11 @@ class StudentUpdate(BaseModel):
     address: Optional[str] = None
     contact_info: Optional[str] = None
 
+# Redirect root URL to the API docs (/docs)
+@app.get("/", include_in_schema=False)  # Don't include this in the API docs
+def redirect_to_docs():
+    return RedirectResponse(url="/docs")
+
 # Create (Add) a new student
 @app.post("/students/", response_model=Student)
 def create_student(student: Student):
@@ -37,7 +42,7 @@ def create_student(student: Student):
     return student
 
 # Read (Retrieve) all students
-@app.get("/", response_model=List[Student])
+@app.get("/students/", response_model=List[Student])
 def get_students():
     return list(students_db.values())
 
