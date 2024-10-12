@@ -3,6 +3,9 @@
 This is a simple **Student Management System** built using **FastAPI**. It supports basic CRUD operations such as adding, updating, viewing, and deleting student information. This system can be useful in educational institutes for managing student records.
 
 ---
+<strong>![website](https://github.com/user-attachments/assets/54cceeb9-c11e-4746-95ca-85fa5156c7b2) Live site: </strong>: <a href="https://student-management-system-yc82.onrender.com/">@Student-Management-System</a>
+
+---
 
 ## 🚀 Features
 
