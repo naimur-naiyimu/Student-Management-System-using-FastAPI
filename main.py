@@ -37,7 +37,7 @@ def create_student(student: Student):
     return student
 
 # Read (Retrieve) all students
-@app.get("/students/", response_model=List[Student])
+@app.get("/", response_model=List[Student])
 def get_students():
     return list(students_db.values())
 
